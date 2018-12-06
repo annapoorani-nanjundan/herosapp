@@ -1,0 +1,16 @@
+<H1> Hero Details</H1>
+
+<div *ngIf="hero">
+
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div><span>name: </span>{{hero.name}}</div>
+  <div><span>email: </span>{{hero.email}}</div>
+  <div><span>Address: </span>{{hero.address.street}}&nbsp;{{hero.address.city}}&nbsp;{{hero.address.zipcode}}</div>
+
+  
+<button (click)="goBack()">go back</button>
+
+
+
+</div>
