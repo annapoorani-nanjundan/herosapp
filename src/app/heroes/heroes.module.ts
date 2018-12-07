@@ -7,7 +7,6 @@ import { FormsModule } from '@angular/forms';
 
 import { HeroesRoutingModule } from './heroes-routing.module';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { SearchHeroComponent } from './search-hero/search-hero.component';
 
 @NgModule({
   imports: [
@@ -17,7 +16,7 @@ import { SearchHeroComponent } from './search-hero/search-hero.component';
   ],
   declarations: [
     HerosListComponent,
-    HeroDetailComponent, SearchHeroComponent
+    HeroDetailComponent
   ]
 })
 export class HeroesModule { }

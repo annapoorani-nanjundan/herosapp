@@ -8,9 +8,13 @@
   <div><span>email: </span>{{hero.email}}</div>
   <div><span>Address: </span>{{hero.address.street}}&nbsp;{{hero.address.city}}&nbsp;{{hero.address.zipcode}}</div>
 
-  
+  <div>
+      <label>name:
+        <input [(ngModel)]="hero.name" placeholder="name"/>
+      </label>
+  </div>
 <button (click)="goBack()">go back</button>
-
+<button (click)="save()">save</button>
 
 
 </div>

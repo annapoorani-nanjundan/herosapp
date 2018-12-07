@@ -52,6 +52,24 @@ export class HerosService {
     );
   }
 
+
+  updateHero (hero: Hero): Observable<any> {
+    let body = JSON.stringify({
+      title: 'foo',
+      body: 'bar',
+      userId: 1
+    });
+
+    return this.http.put('https://jsonplaceholder.typicode.com/posts/1', body, httpOptions).pipe(
+      map((res: Hero) => {
+        this.log(`updated hero id=${hero.id}`); 
+         res = hero;}),   
+    
+    );
+  }
+
+
+
   /** DELETE: delete the hero from the server */
   deleteHero(hero: Hero | number): Observable<Hero> {
     const id = typeof hero === 'number' ? hero : hero.id;
@@ -64,8 +82,29 @@ export class HerosService {
   }
 
 
+  /* GET heroes whose name contains search term */
+  searchHeroes(term: string): Observable<Hero[]> {
+    if (!term.trim()) {
+      // if not search term, return empty hero array.
+      return of([]);
+    }
+    return this.http.get<Hero[]>(`https://jsonplaceholder.typicode.com/users`).pipe(
+      map((res :Hero[]) => {
+        if(!res) return [];
+       res = res.filter( it => {
+          return it.name.toLowerCase().includes(term.toLowerCase());
+        });
+        if (res.length > 0)
+        this.log(`found heroes matching "${term}"`);
+        else 
+        this.log(`No matching heros found "${term}"`);        
+        return res;
+      }),   
+    );
+  }
 
 
+  
 
   /** Log a HeroService message with the MessageService */
   private log(message: string) {

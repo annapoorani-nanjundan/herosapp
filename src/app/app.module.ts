@@ -1,3 +1,4 @@
+import { SearchHeroComponent } from './heroes/search-hero/search-hero.component'
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler } from '@angular/core';
 
@@ -17,6 +18,7 @@ import { MessagesComponent } from './messages/messages.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +31,8 @@ import { MessagesComponent } from './messages/messages.component';
     ErrorComponent,
 
     MessagesComponent,
+
+    SearchHeroComponent,
 
   ],
   imports: [

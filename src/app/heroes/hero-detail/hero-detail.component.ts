@@ -30,6 +30,11 @@ export class HeroDetailComponent implements OnInit {
  
    }
 
+   save(): void {
+    this.herosSrvc.updateHero(this.hero)
+      .subscribe();
+  }
+
    goBack(){
     this.location.back();
    }
