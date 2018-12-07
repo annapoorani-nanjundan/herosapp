@@ -8,24 +8,23 @@ import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
   {
-    path: '',
-    component: DashboardComponent,
-   
+    path: '', redirectTo: '/dashboard', pathMatch: 'full'
+
   },
   {
     path: 'dashboard',
     component: DashboardComponent,
-    
-   
+
+
   },
   {
     path: 'heroes',
     loadChildren: './heroes/heroes.module#HeroesModule',
 
-  }, 
+  },
 
   { path: 'error', component: ErrorComponent },
-  
+
 ];
 
 

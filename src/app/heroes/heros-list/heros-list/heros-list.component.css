@@ -1,10 +1,12 @@
-/* HeroListComponent's private CSS styles */
+/* HeroesComponent's private CSS styles */
 .heroes {
-  margin: 0 0 2em 0;
+  margin: 2em 0 2em 0;
   list-style-type: none;
   padding: 0;
   width: 15em;
 }
+
+
 .heroes li {
   position: relative;
   cursor: pointer;
@@ -26,6 +28,7 @@
   text-decoration: none;
   position: relative;
   display: block;
+  width: 250px;
 }
 
 .heroes a:hover {
@@ -71,10 +74,4 @@ button.delete {
   color: white;
 }
 
-.heroes li.selected {
-  background-color: #CFD8DC;
-  color: white;
-}
-.heroes li.selected:hover {
-  background-color: #BBD8DC;
-}
+.clear { clear:both;}

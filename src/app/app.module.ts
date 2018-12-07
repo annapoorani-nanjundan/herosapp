@@ -11,6 +11,8 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ErrorComponent } from './error/error.component';
 import { GlobalErrorHandler } from './error/global-error-handler.service.';
+import { MessagesComponent } from './messages/messages.component';
+
 
 
 
@@ -25,6 +27,8 @@ import { GlobalErrorHandler } from './error/global-error-handler.service.';
     DashboardComponent,
 
     ErrorComponent,
+
+    MessagesComponent,
 
   ],
   imports: [

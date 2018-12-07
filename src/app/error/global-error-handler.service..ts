@@ -17,7 +17,7 @@ export class GlobalErrorHandler implements ErrorHandler {
       console.error('Error Message :', error.message);
     } else {
    
-      console.error('An error occurred:', error.message);
+      console.error('An error occurred:', error);
     }
 
     router.navigate(['error']);
