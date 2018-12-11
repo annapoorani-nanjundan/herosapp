@@ -1,11 +1,9 @@
-import { HerosListComponent } from './heroes/heros-list/heros-list/heros-list.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { HeroDetailComponent } from './heroes/hero-detail/hero-detail.component';
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ErrorComponent } from './error/error.component';
-
+import { HeroFormComponent } from './heroes/hero-form/hero-form.component';
 const routes: Routes = [
   {
     path: '', redirectTo: '/dashboard', pathMatch: 'full'
@@ -21,6 +19,9 @@ const routes: Routes = [
     path: 'heroes',
     loadChildren: './heroes/heroes.module#HeroesModule',
 
+  },
+
+  { path:'create', component:HeroFormComponent
   },
 
   { path: 'error', component: ErrorComponent },

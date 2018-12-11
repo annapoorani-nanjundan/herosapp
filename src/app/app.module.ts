@@ -1,7 +1,8 @@
+import { HeroFormComponent } from './heroes/hero-form/hero-form.component';
 import { SearchHeroComponent } from './heroes/search-hero/search-hero.component'
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -33,14 +34,19 @@ import { MessagesComponent } from './messages/messages.component';
     MessagesComponent,
 
     SearchHeroComponent,
+    HeroFormComponent
+
+
+
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [ { provide: ErrorHandler, useClass: GlobalErrorHandler }],
+  providers: [{ provide: ErrorHandler, useClass: GlobalErrorHandler }],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { } 

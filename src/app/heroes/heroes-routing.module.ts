@@ -1,3 +1,4 @@
+
 import { HerosListComponent } from './heros-list/heros-list/heros-list.component';
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -9,8 +10,9 @@ const heroesRoutes: Routes = [
 
   
     { path:'hero/:id', component:HeroDetailComponent
-    }
+    },
   
+   
 
   
 ];

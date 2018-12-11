@@ -29,6 +29,8 @@ export class SearchHeroComponent implements OnInit {
       // switch to new search observable each time the term changes
       switchMap((term: string) => this.herosSrvc.searchHeroes(term)),
     );
+
+   
   }
 
   // Push a search term into the observable stream.
